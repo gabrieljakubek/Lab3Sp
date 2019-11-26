@@ -15,7 +15,7 @@ function ocultarSpinner() {
 
 function nextId(data) {
     let anuncios = JSON.parse(data)
-    id = Math.max.apply(null, anuncios.map(function (anuncio) {
+    id = Math.max.apply(null, anuncios.map(function(anuncio) {
         return anuncio.id;
     }));
     return id + 1;
@@ -48,8 +48,13 @@ function cargarDatos(primer) {
         ocultarSpinner();
         crearBoxes(listado, "checkBoxes");
         filtrarTabla();
-    } else if (typeof (listado)) { } else {
+    } else {
         listado = JSON.parse(anuncios);
+        // listado = [];
+        // lista = JSON.parse(anuncios);
+        // lista.forEach(element => {
+        //     listado.push(new Anuncio(element['_id'], element['_titulo'], element['_transaccion'], element['_descripcion'], element['_precio'], element['_num_wc'], element['_num_estacionamiento'], element['_num_dormitorio']))
+        // });
         if (primer) {
             ocultarSpinner();
             crearBoxes(listado, "checkBoxes");
@@ -59,6 +64,8 @@ function cargarDatos(primer) {
             filtrarTabla();
         }
     }
+    /* Anuncio.generarListado(listado);
+    console.log(listado); */
 }
 
 function guardarLS(listado) {

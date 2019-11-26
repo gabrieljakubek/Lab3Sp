@@ -58,7 +58,5 @@ class Anuncio {
     set num_estacionamiento(v) {
         this._num_estacionamiento = v;
     }
-    GenerarListado(params) {
-    }
 }
 //# sourceMappingURL=outfile.js.map

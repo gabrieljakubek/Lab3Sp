@@ -1,5 +1,5 @@
 class Anuncio {
-    private _id?: number|any;
+    private _id?: number | any;
     private _titulo: string;
     private _transaccion: string;
     private _descripcion: string;
@@ -7,7 +7,7 @@ class Anuncio {
     private _num_dormitorio: number;
     private _num_wc: number;
     private _num_estacionamiento: number;
-    constructor(id = 0, titulo:string ="Hola", transaccion:string, descripcion:string, precio: number, num_dormitorio: number, num_wc: number, num_estacionamientos: number) {
+    constructor(id = 0, titulo: string = "Hola", transaccion: string, descripcion: string, precio: number, num_dormitorio: number, num_wc: number, num_estacionamientos: number) {
         this._id = id;
         this._titulo = titulo;
         this._transaccion = transaccion;
@@ -80,8 +80,12 @@ class Anuncio {
     public set num_estacionamiento(v: number) {
         this._num_estacionamiento = v;
     }
-
-    public function GenerarListado(params:type) {
-        
-    }
+/* 
+    public static generarListado = function (v:[object]) {
+        let anuncios  = new Array();
+        v.forEach(element => {
+            anuncios.push(new Anuncio(element._id,element._titulo,element._transaccion,element._descripcion,element._precio,element._num_dormitorio,element._num_wc,element._num_estacionamiento));
+        });
+        console.log(anuncios);
+    } */
 }

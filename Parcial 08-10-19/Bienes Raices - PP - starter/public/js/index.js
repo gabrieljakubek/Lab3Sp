@@ -156,7 +156,7 @@ function cargarTabla(datos) {
 }
 
 function filtrarTabla() {
-    let opciones = ['_id'];
+    let opciones = ['id'];
     $('.box input:checked').each(function() {
         if ($(this).prop('checked') == true) {
             opciones.push($(this).val());

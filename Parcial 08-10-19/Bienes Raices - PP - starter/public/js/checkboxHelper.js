@@ -1,7 +1,7 @@
 function crearBoxes(array, boxsId) {
     var divBox = document.getElementById(boxsId);
     for (atributo in array[0]) {
-        console.log(atributo);
+        //console.log(atributo);
         if (atributo != "id" && atributo != '_id') {
             let div = document.createElement("div");
             div.classList.add("box");
@@ -19,7 +19,7 @@ function crearBoxes(array, boxsId) {
             div.appendChild(checkbox);
             divBox.appendChild(div);
         } else {
-            console.log("hola");
+            //console.log("hola");
             let div = document.createElement("div");
             div.classList.add("box");
             let labelA = document.createElement("label");
